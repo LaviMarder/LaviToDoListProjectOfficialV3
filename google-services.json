@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "47371330227",
+    "project_id": "lavitodolistprojectofficialv3",
+    "storage_bucket": "lavitodolistprojectofficialv3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47371330227:android:32191fb7478fe617fcc6c6",
+        "android_client_info": {
+          "package_name": "com.companyname.lavitodolistprojectofficialv3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEL0hDL2BHZKsTYFnTlh_1iRegW9bZaPc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
