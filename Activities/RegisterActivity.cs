@@ -65,7 +65,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
         }
 
         private async void SaveDocument()
-        {
+        {//עי
             if (await RegisterData(etMailReg.Text, etPasswordReg.Text, etFullNameReg.Text, etUsernameReg.Text))
             {
                 Toast.MakeText(this, "Reggister Successfully", ToastLength.Short).Show();
@@ -81,7 +81,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
             {
                 Toast.MakeText(this, "Register Failed", ToastLength.Short).Show();
             }
-        }
+        }//
 
         private async Task<bool> RegisterData(string Mail, string Password, string FullName, string UserName)
         {
