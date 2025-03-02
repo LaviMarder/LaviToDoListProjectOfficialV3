@@ -82,7 +82,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
                 Toast.MakeText(this, "Register Failed", ToastLength.Short).Show();
             }
         }//
-
+        //
         private async Task<bool> RegisterData(string Mail, string Password, string FullName, string UserName)
         {
             try
