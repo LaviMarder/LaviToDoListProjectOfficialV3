@@ -87,7 +87,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
         {
             try
             {
-                await fbd.auth.CreateUserWithEmailAndPassword(Mail, Password);
+                await fbd.auth.CreateUserWithEmailAndPassword(Mail, Password);//
                 uid = fbd.auth.CurrentUser.Uid;
                 HashMap userMap = new HashMap();
                 userMap.Put(General.KEY_FULLNAME, FullName);
