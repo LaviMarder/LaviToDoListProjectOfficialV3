@@ -35,7 +35,7 @@ namespace LaviToDoListProjectOfficialV3
 
         private void BtnLoginMain_Click(object? sender, EventArgs e)
         {
-            Intent intent = new Intent(this, typeof(AddTaskActivity));
+            Intent intent = new Intent(this, typeof(LoginActivity));
             StartActivity(intent);
         }
 

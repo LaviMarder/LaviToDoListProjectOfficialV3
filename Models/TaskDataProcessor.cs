@@ -16,12 +16,13 @@ namespace LaviToDoListProjectOfficialV3.Models
         public string TaskId { get; set; }
         public string TaskTitle { get; set; }
         public string TaskDescription { get; set; }
+        public string TaskUserId { get; set; }
         public string Deadline { get; set; }  // Deadline is now a string
         public int TimeEstimate { get; set; }  // Time estimate is now an integer (e.g., 1 for short, 2 for medium, 3 for long)
         public int ImportanceLevel { get; set; }  // Importance level is now an integer (e.g., 1 for low, 2 for medium, 3 for high)
 
         // Constructor with the new integer values for TimeEstimate and ImportanceLevel
-        public TaskDataProcessor(string taskId, string taskTitle, string? taskDescription, string? deadline, int timeEstimate, int importanceLevel)
+        public TaskDataProcessor(string taskId, string taskTitle, string? taskDescription, string? deadline, int timeEstimate, int importanceLevel, string taskUserId)
         {
             TaskId = taskId;
             TaskTitle = taskTitle;
@@ -31,6 +32,7 @@ namespace LaviToDoListProjectOfficialV3.Models
             TimeEstimate = timeEstimate;  
             
             ImportanceLevel = importanceLevel;
+            TaskUserId = taskUserId;
         }
 
         public TaskDataProcessor()
@@ -41,6 +43,7 @@ namespace LaviToDoListProjectOfficialV3.Models
             Deadline = "No date set";  // Default to no deadline set
             TimeEstimate = 2;  // Default to Medium time estimate
             ImportanceLevel = 2;  // Default to Medium importance level
+            TaskUserId = string.Empty;
         }
     }
 }

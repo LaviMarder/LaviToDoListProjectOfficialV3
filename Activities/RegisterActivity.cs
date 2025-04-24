@@ -73,8 +73,9 @@ namespace LaviToDoListProjectOfficialV3.Activities
                 etPasswordReg.Text = "";
                 etFullNameReg.Text = "";
                 etUsernameReg.Text = "";
-                //Intent intent = new Intent(this, typeof(MainActivity));
-                //StartActivity(intent);
+                Intent intent = new Intent(this, typeof(MainActivity));
+                intent.PutExtra("uid", uid);
+                StartActivity(intent);
 
             }
             else
@@ -89,6 +90,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
             {
                 await fbd.auth.CreateUserWithEmailAndPassword(Mail, Password);//
                 uid = fbd.auth.CurrentUser.Uid;
+
                 HashMap userMap = new HashMap();
                 userMap.Put(General.KEY_FULLNAME, FullName);
                 userMap.Put(General.KEY_MAIL, Mail);

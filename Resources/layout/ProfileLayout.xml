@@ -3,24 +3,26 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:text="MyApp"
-        android:layout_width="match_parent"
+    <TextView 
+        android:text="Profile"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/textView1" />
+        android:textSize="30sp" />
     <Button
-        android:text="Register"
+        android:text="Full Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnRegisterMain" />
+        android:id="@+id/etFullNamePro" />
     <Button
-        android:text="Login"
+        android:text="Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLoginMain"/>
-    
+        android:id="@+id/etUsernamePro"/>
+        <Button
+        android:text="Mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etMailPro"/>
 
 
 

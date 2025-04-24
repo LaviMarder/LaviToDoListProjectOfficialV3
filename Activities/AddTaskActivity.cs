@@ -27,14 +27,15 @@ namespace LaviToDoListProjectOfficialV3.Activities
         TaskDataProcessor task;
 
         HashMap ha;
-        string tid;
+        string tid, uid;
         public static string id;
+
 
         protected override void OnCreate(Bundle? savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.AddTaskLayout);
-
+            uid = Intent.GetStringExtra("uid");
             // Create your application here
 
             InItObject();
@@ -92,7 +93,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
             try
             {
                 // Generate task ID (you can use a unique identifier or Firestore auto-ID)
-                string taskId =fbd.GetNewDocumentId(General.FS_TASK_COLLECTION);
+                string taskId = fbd.GetNewDocumentId(General.FS_TASK_COLLECTION);
 
                 // Create a map to store the task data
                 HashMap taskMap = new HashMap();
@@ -101,7 +102,8 @@ namespace LaviToDoListProjectOfficialV3.Activities
                 taskMap.Put("Deadline", string.IsNullOrWhiteSpace(deadline) ? "No date set" : deadline);
                 taskMap.Put("TimeEstimate", timeEstimate);  // Assuming it's already in a suitable format (e.g., "1", "2", "3")
                 taskMap.Put("ImportanceLevel", importanceLevel);  // Similar to timeEstimate
-                taskMap.Put("taskId",taskId);
+                taskMap.Put("taskId", taskId);
+                taskMap.Put("TaskUserId", uid);
                 // Reference to Firestore collection where the task will be stored
                 DocumentReference taskRef = fbd.firestore.Collection(General.FS_TASK_COLLECTION).Document(taskId);
 

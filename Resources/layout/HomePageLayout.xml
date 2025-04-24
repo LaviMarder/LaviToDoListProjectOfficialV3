@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <TextView
         android:text="MyApp"
         android:layout_width="match_parent"
@@ -11,17 +12,21 @@
         android:minHeight="25px"
         android:id="@+id/textView1" />
     <Button
-        android:text="Register"
+        android:text="Add Task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnRegisterMain" />
+        android:id="@+id/btnAddTaskHome" />
     <Button
-        android:text="Login"
+        android:text="My Profile"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnLoginMain"/>
-    
+        android:id="@+id/btnProfileHome"/>
 
+    <Button
+    android:text="Task List"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnTaskListHome"/>
 
 
 </LinearLayout>

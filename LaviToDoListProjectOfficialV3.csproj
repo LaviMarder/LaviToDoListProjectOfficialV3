@@ -61,7 +61,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\AddTaskActivity.cs" />
+    <Compile Include="Activities\HomePageActivity.cs" />
+    <Compile Include="Activities\LoginActivity.cs" />
+    <Compile Include="Activities\ProfileActivity.cs" />
     <Compile Include="Activities\RegisterActivity.cs" />
+    <Compile Include="Activities\TaskListActivity.cs" />
     <Compile Include="Helpers\FbData.cs" />
     <Compile Include="Helpers\General.cs" />
     <Compile Include="MainActivity.cs" />
@@ -123,6 +127,21 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\AddTaskLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\LoginLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\ProfileLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\HomePageLayout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
