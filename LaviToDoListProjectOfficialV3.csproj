@@ -68,6 +68,7 @@
     <Compile Include="Activities\TaskListActivity.cs" />
     <Compile Include="Helpers\FbData.cs" />
     <Compile Include="Helpers\General.cs" />
+    <Compile Include="Helpers\TaskAdapter.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Models\TaskDataProcessor.cs" />
     <Compile Include="Models\UserDataProcessor.cs" />
@@ -142,6 +143,16 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\HomePageLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\TaskRowLayout.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\TaskListLayout.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -8,21 +8,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30sp" />
-    <Button
+    <TextView
         android:text="Full Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etFullNamePro" />
-    <Button
+        android:id="@+id/tvFullNamePro" />
+    <TextView
         android:text="Username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etUsernamePro"/>
-        <Button
+        android:id="@+id/tvUsernamePro"/>
+        <TextView
         android:text="Mail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/etMailPro"/>
+        android:id="@+id/tvMailPro"/>
 
 
 
