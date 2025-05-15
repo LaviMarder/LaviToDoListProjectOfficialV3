@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Grpc;
 
 namespace LaviToDoListProjectOfficialV3.Activities
 {
@@ -40,6 +41,8 @@ namespace LaviToDoListProjectOfficialV3.Activities
 
             InItObject();
             InitViews();
+            CreateDialog();
+
         }
 
         private void InItObject()
@@ -60,6 +63,22 @@ namespace LaviToDoListProjectOfficialV3.Activities
             // Sync the button variable with XML ID
             btnAddTask = FindViewById<Button>(Resource.Id.btnAddTask); // Button for adding task
             btnAddTask.Click += BtnAddTask_Click; // Event handler for button click
+        }
+
+
+        private void CreateDialog()
+        {
+            DateTime dt = DateTime.Today;
+            DatePickerDialog d = new DatePickerDialog(this, OnDateSet, dt.Year, dt.Month - 1, dt.Day);
+            d.Show();
+        }
+
+        private void OnDateSet(object sender, DatePickerDialog.DateSetEventArgs e)
+        {
+            string str = e.Date.ToString("dd/MM/yyyy");
+            task.Deadline = str;
+
+
         }
 
         private void BtnAddTask_Click(object sender, EventArgs e)
@@ -99,7 +118,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
                 HashMap taskMap = new HashMap();
                 taskMap.Put("TaskTitle", taskTitle);
                 taskMap.Put("TaskDescription", string.IsNullOrWhiteSpace(taskDescription) ? "No description" : taskDescription);
-                taskMap.Put("Deadline", string.IsNullOrWhiteSpace(deadline) ? "No date set" : deadline);
+                taskMap.Put("Deadline", task.Deadline);
                 taskMap.Put("TimeEstimate", timeEstimate);  // Assuming it's already in a suitable format (e.g., "1", "2", "3")
                 taskMap.Put("ImportanceLevel", importanceLevel);  // Similar to timeEstimate
                 taskMap.Put("taskId", taskId);

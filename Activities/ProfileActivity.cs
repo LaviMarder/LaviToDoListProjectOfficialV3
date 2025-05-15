@@ -63,7 +63,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
         }
 
 
-        private void PrintUser(UserDataProcessor user, string data)
+        private void PrintUser(UserDataProcessor user)
         {
             tvMailPro.Text = user.UserMail;
             tvUsernamePro.Text = user.UserUserName;
@@ -81,13 +81,18 @@ namespace LaviToDoListProjectOfficialV3.Activities
         public void OnSuccess(Java.Lang.Object result)
         {
             var snapshot = (DocumentSnapshot)result;
-               //     public UserDataProcessor(string userId, string userMail, string userUserName, string userFullName, string userPassword)
+            //     public UserDataProcessor(string userId, string userMail, string userUserName, string userFullName, string userPassword)
+            string id, mail, username, fullName, password;
+            id = snapshot.Id;
+            mail = snapshot.Get("UserMail").ToString();
+            username = snapshot.Get("UserUserName").ToString();
+            fullName = snapshot.Get("UserUserName").ToString();
+            password = snapshot.Get("UserPassword").ToString();
+            int a = 5;
+            user = new UserDataProcessor(id, mail, username, fullName, password);
 
-            user = new UserDataProcessor(snapshot.Get("UserId").ToString(), snapshot.Get("UserMail").ToString(), snapshot.Get("UserUserName").ToString(), snapshot.Get("UserFullName").ToString(), (snapshot.Get("UserPassword").ToString()));
-            string data = "";
 
-
-            PrintUser(user, data);
+            PrintUser(user);
         }
     }
 }

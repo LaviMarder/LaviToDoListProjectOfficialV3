@@ -53,7 +53,7 @@ namespace LaviToDoListProjectOfficialV3.Helpers
             if (task != null)
             {
                 TaskName.Text = task.TaskTitle;
-                level = task.ImportanceLevel;
+                //level = task.ImportanceLevel;
             }
 
             return view;

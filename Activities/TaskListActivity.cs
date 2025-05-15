@@ -121,8 +121,8 @@ namespace LaviToDoListProjectOfficialV3.Activities
                 {
                     TaskId = item.Id,
                     TaskTitle = item.Get("TaskTitle").ToString(),
-                    ImportanceLevel = int.Parse(item.Get("ImportanceLevel").ToString()),
-     
+                    //ImportanceLevel = int.Parse(item.Get("ImportanceLevel").ToString()),
+
                 };
                 if (item.Get("TaskUserId").ToString() == uid)
                 {
