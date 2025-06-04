@@ -26,14 +26,6 @@
         android:hint="Description (Optional)"
         android:inputType="textMultiLine" />
 
-    <!-- Deadline -->
-    <EditText
-        android:layout_width="274.5dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/etDeadline"
-        android:hint="Deadline (yyyy-mm-dd)"
-        android:inputType="datetime" />
-
     <!-- Time Estimate (Short/Medium/Long) -->
     <EditText
         android:layout_width="354.5dp"

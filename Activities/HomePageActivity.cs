@@ -18,7 +18,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
     [Activity(Label = "HomePageActivity")]
     public class HomePageActivity : Activity, IOnClickListener
     {
-        Button btnTaskListHome, btnProfileHome, btnAddTaskHome;
+        Button btnTaskListHome, btnProfileHome, btnAddTaskHome, btnNotificationsHome;
         FbData fbd;
 
         string uid;
@@ -42,11 +42,14 @@ namespace LaviToDoListProjectOfficialV3.Activities
             btnProfileHome = FindViewById<Button>(Resource.Id.btnProfileHome);
 
             btnAddTaskHome = FindViewById<Button>(Resource.Id.btnAddTaskHome);
+            btnNotificationsHome = FindViewById<Button>(Resource.Id.btnNotificationsHome);
+
 
             btnTaskListHome.SetOnClickListener(this);
             btnProfileHome.SetOnClickListener(this);
 
             btnAddTaskHome.SetOnClickListener(this);
+            btnNotificationsHome.SetOnClickListener(this);
 
         }
         public void OnClick(View v)
@@ -72,7 +75,14 @@ namespace LaviToDoListProjectOfficialV3.Activities
 
                 StartActivity(intent);
             }
-            
+            else if (v == btnNotificationsHome)
+            {
+                Intent intent = new Intent(this, typeof(NotificationsActivity));
+                intent.PutExtra("uid", uid);
+
+                StartActivity(intent);
+            }
+
         }
     }
 }

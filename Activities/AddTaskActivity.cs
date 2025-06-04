@@ -21,7 +21,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
     [Activity(Label = "AddTaskActivity")]
     public class AddTaskActivity : Activity
     {
-        EditText etTaskTitle, etTaskDescription, etDeadline, etTimeEstimate, etImportanceLevel;
+        EditText etTaskTitle, etTaskDescription, etTimeEstimate, etImportanceLevel;
         Button btnAddTask;
 
         FbData fbd;
@@ -56,7 +56,6 @@ namespace LaviToDoListProjectOfficialV3.Activities
             // Sync the variable names with XML IDs for task-related fields
             etTaskTitle = FindViewById<EditText>(Resource.Id.etTaskTitle); // Task title field
             etTaskDescription = FindViewById<EditText>(Resource.Id.etTaskDescription); // Task description field
-            etDeadline = FindViewById<EditText>(Resource.Id.etDeadline); // Deadline field
             etTimeEstimate = FindViewById<EditText>(Resource.Id.etTimeEstimate); // Time estimate field
             etImportanceLevel = FindViewById<EditText>(Resource.Id.etImportanceLevel); // Importance level field
 
@@ -90,13 +89,12 @@ namespace LaviToDoListProjectOfficialV3.Activities
 
         private async void SaveDocument()
         {
-            if (await AddTaskData(etTaskTitle.Text, etTaskDescription.Text, etDeadline.Text, etTimeEstimate.Text, etImportanceLevel.Text))
+            if (await AddTaskData(etTaskTitle.Text, etTaskDescription.Text, etTimeEstimate.Text, etImportanceLevel.Text))
             {
                 Toast.MakeText(this, "Task Added Successfully", ToastLength.Short).Show();
                 // Clear the input fields after adding the task
                 etTaskTitle.Text = "";
                 etTaskDescription.Text = "";
-                etDeadline.Text = "";
                 etTimeEstimate.Text = "";
                 etImportanceLevel.Text = "";
             }
@@ -107,7 +105,7 @@ namespace LaviToDoListProjectOfficialV3.Activities
         }
 
 
-        private async Task<bool> AddTaskData(string taskTitle, string taskDescription, string deadline, string timeEstimate, string importanceLevel)
+        private async Task<bool> AddTaskData(string taskTitle, string taskDescription, string timeEstimate, string importanceLevel)
         {
             try
             {
